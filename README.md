@@ -368,7 +368,7 @@ To extend the project:
 
 ## 🚀 Live Demo
 
-**Deployed App**: [View on Streamlit Cloud](https://water-quality-dashboard.streamlit.app)
+**Deployed App**: [https://water-quality-dashboard-data-vizualization.streamlit.app](https://water-quality-dashboard-data-vizualization.streamlit.app)
 
 **GitHub Repository**: [Ragasri07/water-quality-dashboard](https://github.com/Ragasri07/water-quality-dashboard)
 
