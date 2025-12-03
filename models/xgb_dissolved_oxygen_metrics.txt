@@ -1,0 +1,5 @@
+XGBoost — Dissolved Oxygen
+RMSE: 0.0168
+R²: 0.9989
+MAE: 0.0062
+Train: 1200 | Test: 800

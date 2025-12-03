@@ -1,0 +1,5 @@
+RandomForest — Turbidity
+RMSE: 1.0111
+R²: -1.7894
+MAE: 0.8102
+Train: 1600 | Test: 400

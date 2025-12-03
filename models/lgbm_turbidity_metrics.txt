@@ -1,0 +1,5 @@
+LightGBM — Turbidity
+RMSE: 1.0288
+R²: -1.8874
+MAE: 0.8336
+Train: 1600 | Test: 400

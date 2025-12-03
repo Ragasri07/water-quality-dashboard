@@ -1,0 +1,5 @@
+XGBoost — Turbidity
+RMSE: 1.1062
+R²: -2.3386
+MAE: 0.9273
+Train: 1600 | Test: 400

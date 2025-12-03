@@ -1,0 +1,5 @@
+RandomForest — Specific Conductance
+RMSE: 0.0867
+R²: 0.6655
+MAE: 0.0463
+Train: 1600 | Test: 400

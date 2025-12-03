@@ -1,0 +1,5 @@
+RandomForest — pH
+RMSE: 0.0146
+R²: 0.8276
+MAE: 0.0107
+Train: 24712 | Test: 6179

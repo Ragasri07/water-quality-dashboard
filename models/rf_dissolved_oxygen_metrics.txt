@@ -1,0 +1,5 @@
+RandomForest — Dissolved Oxygen
+RMSE: 0.2606
+R²: 0.7402
+MAE: 0.1907
+Train: 24712 | Test: 6179
