@@ -2238,7 +2238,7 @@ def page_ml(df):
                         HAS_LGB = False
                     
                     if not HAS_LGB:
-                        st.warning("⚠️ LightGBM not installed. Run: `pip install lightgbm`")
+                        st.info("ℹ️ LightGBM is not available in this deployment. Using Random Forest instead.")
                     else:
                         from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
                         from sklearn.model_selection import train_test_split
