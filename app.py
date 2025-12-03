@@ -1700,51 +1700,6 @@ def page_explore(df):
         )
         fig.update_traces(marker=dict(size=4))
         st.plotly_chart(fig, use_container_width=True)
-    
-    # Additional Advanced Visualizations Tab
-    st.markdown("---")
-    st.markdown("### 🎨 Advanced Chart Types")
-    
-    viz_col1, viz_col2 = st.columns(2)
-    
-    with viz_col1:
-        # Parallel Coordinates Plot
-        st.markdown("#### 🎼 Parallel Coordinates (Multi-Dimensional View)")
-        
-        numeric_params = [c for c in df.columns if df[c].dtype.kind in 'fiu' and c not in ['Record number']][:6]
-        if len(numeric_params) >= 3:
-            df_parallel = df[numeric_params + ['WQI_Class']].dropna().sample(min(500, len(df)))
-            
-            fig_parallel = px.parallel_coordinates(
-                df_parallel,
-                dimensions=numeric_params,
-                color='WQI',
-                color_continuous_scale='RdYlGn',
-                title="Parameter Relationships (Each line = one measurement)"
-            )
-            fig_parallel.update_layout(height=400)
-            st.plotly_chart(fig_parallel, use_container_width=True)
-            st.caption("💡 Parallel coordinates help identify patterns across multiple parameters simultaneously")
-    
-    with viz_col2:
-        # Sunburst Chart
-        st.markdown("#### ☀️ Sunburst - Hierarchical Data Breakdown")
-        
-        if 'season' in df.columns and 'WQI_Class' in df.columns:
-            # Create hierarchical data
-            sunburst_data = df.groupby(['season', 'WQI_Class']).size().reset_index(name='count')
-            
-            fig_sunburst = px.sunburst(
-                sunburst_data,
-                path=['season', 'WQI_Class'],
-                values='count',
-                title='Water Quality Distribution by Season',
-                color='count',
-                color_continuous_scale='Viridis'
-            )
-            fig_sunburst.update_layout(height=400)
-            st.plotly_chart(fig_sunburst, use_container_width=True)
-            st.caption("💡 Click segments to zoom into specific seasons")
 
 
 def page_analysis(df):
