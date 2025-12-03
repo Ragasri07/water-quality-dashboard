@@ -2164,7 +2164,7 @@ def page_ml(df):
                         HAS_XGB = False
                     
                     if not HAS_XGB:
-                        st.warning("⚠️ XGBoost unavailable (requires libomp library)\n\n**To install:**\n- Install Homebrew: `/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"`\n- Then run: `brew install libomp && pip install xgboost`")
+                        st.info("ℹ️ XGBoost is not available in this deployment. Using Random Forest and LightGBM instead.")
                     else:
                         from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
                         from sklearn.model_selection import train_test_split
