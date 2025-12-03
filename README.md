@@ -1,71 +1,139 @@
-# WaterWatch — Water Quality Analytics Dashboard
+# 💧 Water Quality Management Dashboard
 
-> *Interactive monitoring and storytelling for water quality management.*
+> *Advanced data visualization and analytics for water quality monitoring*
 
-A Streamlit-based analytics platform for exploring water quality trends, identifying pollution patterns, and forecasting turbidity using machine learning. Built with a Nykaa-inspired product design for intuitive navigation and beautiful visualizations.
+An interactive Streamlit dashboard featuring **10+ advanced visualization techniques** for comprehensive water quality analysis. Built for academic demonstration of data visualization methods, featuring cutting-edge charts, statistical analysis, and machine learning models.
 
 ---
 
 ## 🎯 Project Overview
 
-**Goal**: Analyze, monitor, and visualize pollution trends and water quality variations across time, providing insights to support sustainable water resource management.
+**Goal**: Demonstrate advanced data visualization techniques through comprehensive water quality monitoring and analysis.
 
-**Target Users**:
-- Environmental scientists & water quality managers
-- Policy makers & sustainability officers
-- Data analysts & engineers
-- Public health agencies
+**Project Type**: Academic Data Visualization Project
 
-**Key Deliverables**:
-- Interactive web dashboard (Streamlit)
-- Statistical analysis (correlations, trends, seasonal patterns)
-- ML-based forecasting (turbidity prediction)
-- Exportable insights & reports
+**Key Features**:
+- 🎨 **10+ Advanced Visualization Types** (Gauge, Radar, Sankey, Waterfall, Sunburst, Treemap, etc.)
+- 📊 **Interactive Dashboards** with real-time filtering and exploration
+- 🤖 **Machine Learning Models** (RandomForest, XGBoost, LightGBM)
+- 📈 **Statistical Analysis** (Anomaly Detection, Hypothesis Testing, Correlations)
+- 🎯 **Professional UI/UX** with animated gradients and responsive design
+
+**Target Audience**:
+- Data visualization students and educators
+- Environmental data analysts
+- Data science portfolio projects
+- Academic project demonstrations
 
 ---
 
-## 📊 Features
+## 📊 Features & Visualizations
 
-### Current (v1)
+### 🏠 Home Page
+✅ **Core Metrics Dashboard**
+- KPI cards with gradient backgrounds (Total Records, Avg WQI, pH, Turbidity)
+- Circular progress indicators for WQI classifications
+- Time series trends and distribution charts
 
-✅ **Home Page**
-- Hero banner (Nykaa-inspired gradient)
-- Top polluted sites as product-style cards
-- Quick KPIs (records count, avg WQI, avg turbidity, avg rainfall)
+✅ **Advanced Visualizations**
+- 📊 **Gauge Chart**: Real-time WQI with color-coded thresholds and delta indicators
+- 🕸️ **Radar Chart**: Current vs ideal parameter comparison (multi-dimensional)
+- 🌊 **Sankey Diagram**: Water quality flow analysis (Start → End states with color-coded improvements)
+- 📉 **Waterfall Chart**: WQI component breakdown showing contributions
 
-✅ **Explore Page**
-- Parameter selection (multi-select)
-- Date range filtering
-- Time-series visualization with rolling mean
-- Distribution histograms and boxplots
+### 🔍 Explore Page (4 Comprehensive Tabs)
+✅ **Time Series Explorer**
+- Multi-parameter comparison with interactive date ranges
+- Rolling mean smoothing with statistical summaries
+- Dynamic chart updates with parameter selection
 
-✅ **Analysis Page**
-- WQI contributions breakdown (stacked area chart)
-- Spearman correlation heatmap with pairwise non-missing counts
-- Automated guidance when data is insufficient
+✅ **Distribution Analysis**
+- Histogram + Box plots with detailed statistics
+- Violin plots for distribution shape visualization
+- Kernel Density Estimation (KDE) plots
 
-✅ **ML Demo Page**
-- RandomForest model training on historical data
-- Turbidity prediction with interactive sliders
-- Model performance metrics (RMSE)
+✅ **Parameter Inspector**
+- Hourly pattern analysis with line charts
+- Day-of-week aggregations
+- Outlier detection using IQR method
 
+✅ **Advanced Multi-Dimensional Views**
+- 📐 **Parallel Coordinates**: High-dimensional data visualization (500 sample points)
+- ☀️ **Sunburst Chart**: Hierarchical Season → WQI classification breakdown
+
+### 📈 Analysis Page (6 Advanced Tabs)
+✅ **WQI Trends Analysis**
+- Period comparison (7, 30, 90 days)
+- Volatility analysis with rolling standard deviation
+- Trend direction indicators
+
+✅ **Seasonal Decomposition**
+- Trend, seasonal, and residual components
+- Time series decomposition using statsmodels
+
+✅ **Correlation Analysis**
+- Spearman correlation heatmap with threshold filtering
+- Top correlations table with strength indicators
+- Pairwise observation counts
+
+✅ **Temporal Patterns**
+- Monthly aggregation bar charts
+- Hourly heatmaps showing patterns over time
+- Day-of-week analysis
+
+✅ **Anomaly Detection (3 Methods)**
+- 🔍 **IQR Method**: Interquartile range outlier detection
+- 📊 **Z-Score Method**: Statistical deviation analysis
+- 🤖 **Isolation Forest**: ML-based anomaly detection
+
+✅ **Statistical Hypothesis Testing**
+- ANOVA tests for WQI class comparisons
+- T-tests for temporal period comparisons
+- P-value significance reporting
+
+### 💡 Insights Page
+✅ **Health Score Dashboard**
+- Overall health score with color-coded indicators
+- Compliance rate tracking
+- Stability index calculations
+
+✅ **Parameter Health Cards**
+- Individual parameter status (pH, DO, Turbidity, Conductivity)
+- Color-coded health badges (Excellent/Good/Poor)
+- Recent trend indicators
+
+✅ **Advanced Visualizations**
+- 🎯 **Bullet Charts**: Performance vs targets with gauge indicators
+- 🗂️ **Treemap**: Hierarchical data completeness visualization
+- 🏔️ **Ridge Plots**: Monthly parameter distribution comparison
+- 🌡️ **2D Density Contour**: Scatter + contour overlay for relationships
+
+### 🤖 ML Demo Page
+✅ **3 Machine Learning Models**
+- **RandomForest**: Ensemble learning with 50 trees
+- **XGBoost**: Gradient boosting (depth 5, 50 estimators)
+- **LightGBM**: Light gradient boosting machine
+
+✅ **Interactive Predictions**
+- 9 feature inputs with dynamic sliders
+- Real-time predictions with confidence metrics
+- Model performance comparison (RMSE, R², MAE)
+
+✅ **Model Explainability**
+- Feature importance charts (bar & pie)
+- Medal system for feature ranking
+- Model saving and loading functionality
+
+### 📋 Data Page
 ✅ **Data Explorer**
-- Full dataset table view (up to 1000 rows)
+- Full dataset table view with pagination
+- Advanced filtering and sorting
+- Column selection and search
+
+✅ **Data Export**
 - CSV download functionality
-
-### Upcoming (v2)
-
-🔄 **EDA Notebook** — Reproducible analysis with summary stats, missingness maps, seasonal decomposition, and distribution plots.
-
-🔄 **Preprocessing Module** — Centralized `src/preprocessing.py` for unit standardization, aggregation, and WQI calculation.
-
-🔄 **Insights & Alerts** — Auto-generated narrative pages highlighting worsening trends, anomalies, and actionable recommendations.
-
-🔄 **Advanced Forecasting** — XGBoost/LSTM models with cross-validation and SHAP explainability.
-
-🔄 **PDF Report Export** — Automated report generation with charts, summary statistics, and conclusions.
-
-🔄 **API & Deployment** — FastAPI backend + Docker + Streamlit Cloud deployment.
+- Filtered data export options
+- Summary statistics display
 
 ---
 
@@ -78,10 +146,11 @@ A Streamlit-based analytics platform for exploring water quality trends, identif
 ### Installation
 
 ```bash
-# Clone or navigate to project directory
-cd /Users/raga/Desktop/water_quality_project
+# Clone the repository
+git clone https://github.com/Ragasri07/water-quality-dashboard.git
+cd water-quality-dashboard
 
-# Create and activate virtual environment (optional but recommended)
+# Create and activate virtual environment (recommended)
 python3 -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
@@ -128,13 +197,20 @@ water_quality_project/
 
 | Component | Technology |
 |-----------|-----------|
-| **Frontend** | Streamlit 1.50+ |
-| **Data Processing** | Pandas 2.3+, NumPy 2.0+ |
-| **Visualization** | Plotly 5.10+, Seaborn 0.13+, Altair 5.0+ |
-| **Statistical Analysis** | SciPy 1.13+, StatsModels 0.14+ |
-| **Machine Learning** | Scikit-learn 1.6+ (RandomForest) |
-| **Backend** | Python 3.9 |
-| **Deployment** | Streamlit Cloud (planned) |
+| **Framework** | Streamlit 1.50.0 |
+| **Data Processing** | Pandas 2.3.3, NumPy 2.0.2 |
+| **Visualization** | Plotly 6.5.0, Seaborn, Matplotlib |
+| **Machine Learning** | Scikit-learn 1.6.1, XGBoost 2.1.4, LightGBM 4.6.0 |
+| **Statistical Analysis** | SciPy 1.13.1, StatsModels 0.14.5 |
+| **Language** | Python 3.9+ |
+| **Deployment** | Streamlit Cloud |
+
+### Advanced Visualization Library
+All charts built with **Plotly** for:
+- ✨ Interactive zoom, pan, and hover functionality
+- 📱 Responsive design for all screen sizes
+- 🎨 Professional color schemes and themes
+- 💾 Export to PNG/SVG functionality
 
 ---
 
@@ -199,9 +275,10 @@ The app computes a **weighted WQI** combining four parameters:
 - Seasonal breakdown options
 
 ### ML Prediction
-- RandomForest trained on historical turbidity
-- Interactive sliders for pH, rainfall, conductance, temperature
-- Real-time turbidity forecasts with RMSE accuracy
+- 3 models trained on 9 features (pH, Turbidity, Conductance, DO, Temperature, Salinity, Chlorophyll, Water Speed, Direction)
+- Interactive sliders for all parameters
+- Real-time predictions with performance metrics (RMSE, R², MAE)
+- Feature importance visualization and explainability
 
 ---
 
@@ -251,13 +328,30 @@ The app computes a **weighted WQI** combining four parameters:
 
 ---
 
-## 📚 Next Steps
+## 🎓 Visualization Techniques Demonstrated
 
-1. **Run EDA Notebook** — Generate reproducible exploratory analysis (notebooks/eda.ipynb)
-2. **Create Preprocessing Module** — Centralize logic into src/preprocessing.py; save processed.csv
-3. **Build Insights Pages** — Auto-generate alerts and recommendations from data
-4. **Enhance Models** — Add XGBoost, LSTM, and SHAP explainability
-5. **Deploy** — Containerize with Docker; push to Streamlit Cloud
+This project showcases **10+ advanced data visualization types**:
+
+1. **Gauge Charts** (`plotly.graph_objects.Indicator`) - Performance metrics with thresholds
+2. **Radar/Spider Charts** (`go.Scatterpolar`) - Multi-dimensional comparisons
+3. **Sankey Diagrams** (`go.Sankey`) - Flow analysis and state transitions
+4. **Waterfall Charts** (`go.Waterfall`) - Component contribution breakdown
+5. **Parallel Coordinates** (`plotly.express.parallel_coordinates`) - High-dimensional data
+6. **Sunburst Charts** (`px.sunburst`) - Hierarchical data visualization
+7. **Bullet Charts** (`go.Indicator` with bullet gauge) - Target vs actual performance
+8. **Treemaps** (`px.treemap`) - Hierarchical proportions
+9. **Ridge Plots** (Multiple `go.Violin`) - Distribution comparison across categories
+10. **2D Density Contours** (`go.Histogram2dContour`) - Bivariate distributions
+11. **3D Scatter Plots** (`px.scatter_3d`) - Three-dimensional relationships
+12. **Heatmaps** - Temporal patterns and correlations
+13. **Interactive Time Series** - Multi-parameter trends with brushing/linking
+
+### Statistical Methods Applied
+- Anomaly detection (IQR, Z-Score, Isolation Forest)
+- Hypothesis testing (ANOVA, T-tests)
+- Correlation analysis (Spearman)
+- Seasonal decomposition
+- Rolling statistics and volatility
 
 ---
 
@@ -272,27 +366,58 @@ To extend the project:
 
 ---
 
+## 🚀 Live Demo
+
+**Deployed App**: [View on Streamlit Cloud](https://water-quality-dashboard.streamlit.app)
+
+**GitHub Repository**: [Ragasri07/water-quality-dashboard](https://github.com/Ragasri07/water-quality-dashboard)
+
+---
+
+## 📸 Screenshots
+
+![Home Dashboard](https://via.placeholder.com/800x400?text=Advanced+Visualizations)
+*Home page featuring Gauge, Radar, Sankey, and Waterfall charts*
+
+![Explore Page](https://via.placeholder.com/800x400?text=Interactive+Exploration)
+*Multi-dimensional data exploration with parallel coordinates and sunburst charts*
+
+---
+
+## 🎨 UI/UX Design
+
+**Professional Features**:
+- 🎭 Animated gradient header with smooth transitions
+- 🎯 Clean navigation with pill-style buttons
+- 📱 Fully responsive layout
+- 🎨 Consistent color scheme and typography
+- ✨ Interactive visualizations with hover tooltips
+- 🖼️ White background with professional spacing
+
+---
+
 ## 📄 License
 
-This project is provided as-is for educational and research purposes.
+This project is provided for educational and portfolio purposes.
 
 ---
 
-## 📧 Contact & Questions
+## 👤 Author
 
-For questions or feedback, refer to the project documentation or reach out to the development team.
-
----
-
-## 🎨 Design Inspiration
-
-The app UI is inspired by **Nykaa** (beauty e-commerce platform):
-- **Hero banner** with gradient background and call-to-action
-- **Product-style cards** for displaying top sites/items
-- **Dark theme** for professional, modern look
-- **Responsive layout** with clear hierarchy and navigation
+**Ragasri07**
+- GitHub: [@Ragasri07](https://github.com/Ragasri07)
+- Project: Water Quality Management Dashboard
 
 ---
 
-*Last updated: 29 November 2025*  
-*Status: MVP complete (v1); EDA & preprocessing modules in progress (v2)*
+## 🙏 Acknowledgments
+
+- Data visualization techniques inspired by modern data science practices
+- Built with Streamlit and Plotly for interactive analytics
+- Designed for academic demonstration of advanced visualization methods
+
+---
+
+*Last Updated: December 3, 2025*  
+*Version: 1.0 - Production Ready*  
+*Status: ✅ Deployed on Streamlit Cloud*
